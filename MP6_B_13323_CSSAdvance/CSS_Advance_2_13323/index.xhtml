@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Daftar Workshop</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+
+    <body>
+        <h1 class="judulGeter">Daftar Workshop Sekarang</h1>
+        <p class="kalimatPembuka">Amankan kursimu, pilih materi favoritmu, dan siap upgrade skill.</p>
+
+        <form class="kotakSakti" action="" method="post" enctype="multipart/form-data">
+
+            <h3 class="bagianKeramat">Identitas Peserta</h3>
+            <table class="tabelAjaib">
+                <tr>
+                    <td class="kolomLabel"><label for="nama">Nama Peserta</label></td>
+                    <td><input class="kotakKetikKetik" type="text" id="nama" name="nama" size="30" /></td>
+                </tr>
+                <tr>
+                    <td class="kolomLabel"><label for="nim">Nomor Induk Mahasiswa</label></td>
+                    <td><input class="kotakKetikKetik" type="text" id="nim" name="nim" size="30" /></td>
+                </tr>
+                <tr>
+                    <td class="kolomLabel">Gender</td>
+                    <td>
+                        <div class="gerombolanPilihan">
+                            <input type="radio" id="laki" name="jk" value="Laki-laki" />
+                            <label for="laki">Laki-laki</label>
+
+                            <input type="radio" id="perempuan" name="jk" value="Perempuan" />
+                            <label for="perempuan">Perempuan</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="kolomLabel"><label for="prodi">Program Studi</label></td>
+                    <td>
+                        <select class="menuJatuhBebas" id="prodi" name="prodi">
+                            <option>Informatika</option>
+                            <option>Sistem Informasi</option>
+                            <option>Teknik Industri</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <h3 class="bagianKeramat">Pilih Workshop</h3>
+            <table class="tabelAjaib">
+                <tr>
+                    <td class="kolomLabel">Kamu Mendaftar Sebagai</td>
+                    <td>
+                        <div class="gerombolanPilihan">
+                            <input type="radio" id="mahasiswa" name="jenis_peserta" value="Mahasiswa" />
+                            <label for="mahasiswa">Mahasiswa</label>
+
+                            <input type="radio" id="umum" name="jenis_peserta" value="Umum" />
+                            <label for="umum">Umum</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="kolomLabel rataAtas">Materi yang Diminati</td>
+                    <td>
+                        <div class="gerombolanPilihan">
+                            <input type="checkbox" id="uiux" name="materi" value="UI/UX Design" />
+                            <label for="uiux">UI/UX Design</label>
+
+                            <input type="checkbox" id="webdev" name="materi" value="Web Development" />
+                            <label for="webdev">Web Development</label>
+
+                            <input type="checkbox" id="data" name="materi" value="Data Analysis" />
+                            <label for="data">Data Analysis</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <h3 class="bagianKeramat">Detail Lainnya</h3>
+            <table class="tabelAjaib">
+                <tr>
+                    <td class="kolomLabel rataAtas"><label for="alasan">Apa yang Ingin Kamu Pelajari?</label></td>
+                    <td>
+                        <textarea class="areaTulisan" id="alasan" name="alasan" rows="8" cols="30"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="kolomLabel">Metode Pembayaran</td>
+                    <td>
+                        <div class="gerombolanPilihan">
+                            <input type="radio" id="qris" name="pembayaran" value="QRIS" />
+                            <label for="qris">QRIS</label>
+
+                            <input type="radio" id="transfer" name="pembayaran" value="Transfer Bank" />
+                            <label for="transfer">Transfer Bank</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="kolomLabel"><label for="bukti">Unggah Bukti Bayar</label></td>
+                    <td>
+                        <input class="pilihBerkasDongs" type="file" id="bukti" name="bukti" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="sarangTombolGaskeun">
+                        <input class="tombolGaskeunBang" type="submit" name="daftar" value="Kirim Pendaftaran" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

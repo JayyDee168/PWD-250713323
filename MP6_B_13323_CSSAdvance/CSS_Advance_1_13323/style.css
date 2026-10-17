@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500;600&display=swap');
+
+:root {
+    --bg: #0a0c16;
+    --panel: #11142a;
+    --field: #0a0c16;
+    --line: #262f5c;
+    --cyan: #00f0ff;
+    --pink: #ff2bd6;
+    --text: #e6e9ff;
+    --muted: #8b93c7;
+}
+
+body {
+    margin: 0;
+    padding: 40px 16px 60px;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: 17px;
+    color: var(--text);
+    background-color: var(--bg);
+    background-image:
+        radial-gradient(circle at 15% 0%, rgba(255, 43, 214, 0.18), transparent 45%),
+        radial-gradient(circle at 90% 100%, rgba(0, 240, 255, 0.15), transparent 45%),
+        linear-gradient(rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+    background-size: auto, auto, 32px 32px, 32px 32px;
+    background-attachment: fixed;
+}
+
+.judulGeter {
+    max-width: 760px;
+    margin: 0 auto 6px;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--cyan);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.7), 0 0 22px rgba(255, 43, 214, 0.45);
+}
+
+.kalimatPembuka {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    text-align: center;
+    color: var(--muted);
+    letter-spacing: 1px;
+}
+
+.kotakSakti {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--panel);
+    border: 1px solid var(--cyan);
+    border-radius: 14px;
+    padding: 12px 8px 20px;
+    box-shadow: 0 0 0 1px rgba(255, 43, 214, 0.35),
+                0 0 28px rgba(0, 240, 255, 0.25);
+}
+
+.bagianKeramat {
+    margin: 22px 16px 4px;
+    padding-left: 12px;
+    border-left: 3px solid var(--pink);
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pink);
+}
+
+.tabelAjaib {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.tabelAjaib td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+}
+
+.kolomLabel {
+    width: 32%;
+    color: var(--cyan);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.tabelAjaib td.rataAtas {
+    vertical-align: top;
+}
+
+.tabelAjaib td.sarangTombolGaskeun {
+    text-align: center;
+    border-bottom: none;
+    padding-top: 22px;
+}
+
+.kotakKetikKetik,
+.menuJatuhBebas,
+.areaTulisan {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--text);
+    background: var(--field);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.areaTulisan {
+    resize: vertical;
+}
+
+.kotakKetikKetik:focus,
+.menuJatuhBebas:focus,
+.areaTulisan:focus {
+    border-color: var(--cyan);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.45);
+}
+
+.gerombolanPilihan {
+    position: relative;
+}
+
+.gerombolanPilihan input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.gerombolanPilihan label {
+    display: inline-block;
+    margin: 0 6px 8px 0;
+    padding: 6px 16px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    background: var(--field);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.gerombolanPilihan label:hover {
+    border-color: var(--cyan);
+    color: var(--text);
+}
+
+.gerombolanPilihan input:checked + label {
+    color: #0a0c16;
+    font-weight: 600;
+    border-color: transparent;
+    background: linear-gradient(90deg, var(--cyan), var(--pink));
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
+}
+
+.gerombolanPilihan input:focus + label {
+    outline: 2px solid var(--pink);
+    outline-offset: 2px;
+}
+
+.grupKategori + .grupKategori {
+    margin-top: 10px;
+}
+
+.judulRombonganCeriwis {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--pink);
+}
+
+.pilihBerkasDongs {
+    max-width: 100%;
+    color: var(--muted);
+    font-family: inherit;
+}
+
+.pilihBerkasDongs::file-selector-button {
+    margin-right: 12px;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--cyan);
+    background: transparent;
+    border: 1px solid var(--cyan);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pilihBerkasDongs::file-selector-button:hover {
+    color: #0a0c16;
+    background: var(--cyan);
+}
+
+.tombolGaskeunBang {
+    padding: 12px 36px;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0a0c16;
+    background: linear-gradient(90deg, var(--cyan), var(--pink));
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 16px rgba(0, 240, 255, 0.45);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.tombolGaskeunBang:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 24px rgba(255, 43, 214, 0.65);
+}
+
+@media (max-width: 600px) {
+    .judulGeter { font-size: 22px; }
+
+    .tabelAjaib,
+    .tabelAjaib tr,
+    .tabelAjaib td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tabelAjaib td.kolomLabel {
+        width: 100%;
+        padding-bottom: 4px;
+        border-bottom: none;
+    }
+}
